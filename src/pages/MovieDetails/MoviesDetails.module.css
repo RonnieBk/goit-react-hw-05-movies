@@ -1,0 +1,22 @@
+.arrow {
+  margin-right: 3px;
+}
+
+.btn {
+  padding: 1px 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.movieDetails {
+  display: flex;
+}
+
+.info {
+  margin-left: 15px;
+}
+
+.title {
+  /* font-weight: bold; */
+}
