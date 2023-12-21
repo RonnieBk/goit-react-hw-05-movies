@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/881.489fb7cd.chunk.css","mappings":"AAAA,qBACE,WACF,CAEA,yBACE,cACF","sources":["pages/Movies/Movies.module.css"],"sourcesContent":[".input {\n  width: 300px;\n}\n\n.btnSubmit {\n  cursor: pointer;\n}\n"],"names":[],"sourceRoot":""}
