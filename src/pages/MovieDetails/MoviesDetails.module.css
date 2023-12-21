@@ -11,12 +11,19 @@
 
 .movieDetails {
   display: flex;
+  padding-bottom: 3px;
+  border-bottom: solid #b9b6b6;
+}
+
+.picture {
+  width: 200px;
+  height: auto;
 }
 
 .info {
   margin-left: 15px;
 }
 
-.title {
-  /* font-weight: bold; */
+.additionalInfo {
+  border-bottom: solid #b9b6b6;
 }

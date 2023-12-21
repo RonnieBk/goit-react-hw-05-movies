@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import css from './SharedLayout.module.css';
@@ -12,14 +13,16 @@ const StyledLink = styled(NavLink)`
 
 export const SharedLayout = () => {
   return (
-    <container>
+    <div>
       <header>
         <nav className={css.navigation}>
           <StyledLink to="/">Home</StyledLink>
           <StyledLink to="/movies">Movies</StyledLink>
         </nav>
       </header>
-      <Outlet />
-    </container>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
+    </div>
   );
 };

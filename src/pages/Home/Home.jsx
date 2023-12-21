@@ -1,16 +1,33 @@
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export const Home = ({ data }) => {
+import { MoviesList } from 'components/MoviesList/MoviesList.jsx';
+
+import { getData } from 'api.js';
+
+const Home = () => {
+  const [movies, setMovies] = useState([]);
+  const location = useLocation();
+
+  useEffect(() => {
+    const data = async () => {
+      try {
+        const moviesList = await getData();
+        setMovies(moviesList);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+
+    data();
+  }, []);
+
   return (
     <div>
       <h2>Trending today</h2>
-      {/* <ul>
-        {data.map(item => (
-          <li key={item.id}>
-            <Link to={item.backdrop_path}>{item.title || item.name}</Link>
-          </li>
-        ))}
-      </ul> */}
+      <MoviesList movies={movies} location={location} />
     </div>
   );
 };
+
+export default Home;
