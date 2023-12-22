@@ -31,6 +31,14 @@ const MovieDetails = () => {
     data();
   }, [movieId]);
 
+  const handleClick = evt => {
+    const element = evt.target;
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   return (
     <div className={css.wrapper}>
       <Link to={from || '/'} className={css.btn}>
@@ -65,12 +73,12 @@ const MovieDetails = () => {
         <p>Additional information</p>
         <ul>
           <li>
-            <Link to="cast" state={{ from }}>
+            <Link to="cast" state={{ from }} onClick={handleClick}>
               Cast
             </Link>
           </li>
           <li>
-            <Link to="reviews" state={{ from }}>
+            <Link to="reviews" state={{ from }} onClick={handleClick}>
               Reviews
             </Link>
           </li>
