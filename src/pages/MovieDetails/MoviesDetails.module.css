@@ -9,6 +9,9 @@
   cursor: pointer;
   text-decoration: none;
   color: black;
+  border: 1px solid;
+  width: 80px;
+  justify-content: center;
 }
 
 .movieDetails {
